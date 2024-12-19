@@ -1,56 +1,54 @@
-﻿// See https://aka.ms/new-console-template for more information
-using System;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace Hillel_HW1_Demchenko
+
+
+
+namespace Hillel_HW41_Demchenko
 {
-    public class Program
+    public static class Program
     {
-        static void Main()
+        public static void Main(string[] args)
         {
-            int orderNumber;
-            string clientName;
-            string productName;
-            string clientAdress;
+            int weekDay;
 
-            //Ордер №1
-            Console.WriteLine("Order No ");
-            orderNumber = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Client: ");
-            clientName = Console.ReadLine();
-            Console.WriteLine("Product: ");
-            productName = Console.ReadLine();
-            Console.WriteLine("Adress: ");
-            clientAdress = Console.ReadLine();
-            Console.WriteLine();
-            Console.WriteLine($"Order No {orderNumber}. \nClient: {clientName}. \nProduct: {productName}. \nAdress: {clientAdress}.");
-            Console.WriteLine();
+            Console.WriteLine("Enter the number of the day of the week");
+            weekDay = Convert.ToInt32(Console.ReadLine());
 
-            //Ордер №2
-            Console.WriteLine("Order No ");
-            orderNumber = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Client: ");
-            clientName = Console.ReadLine();
-            Console.WriteLine("Product: ");
-            productName = Console.ReadLine();
-            Console.WriteLine("Adress: ");
-            clientAdress = Console.ReadLine();
-            Console.WriteLine();
-            Console.WriteLine($"Order No {orderNumber}. \nClient: {clientName}. \nProduct: {productName}. \nAdress: {clientAdress}.");
-            Console.WriteLine();
+            switch (weekDay)
+            {
+                case 1:
+                    Console.WriteLine("Monday");
+                    break;
+                case 2:
+                    Console.WriteLine("Tuesday");
+                    break;
+                case 3:
+                    Console.WriteLine("Wednesday");
+                    break;
+                case 4:
+                    Console.WriteLine("Thursday");
+                    break;
+                case 5:
+                    Console.WriteLine("Friday");
+                    break;
+                case 6:
+                    Console.WriteLine("Saturday");
+                    break;
+                case 7:
+                    Console.WriteLine("Sunday");
+                    break;
+                default:
+                    Console.WriteLine("Invalid day of week");
+                    break;
 
-            //Ордер №3
-            Console.WriteLine("Order No ");
-            orderNumber = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Client: ");
-            clientName = Console.ReadLine();
-            Console.WriteLine("Product: ");
-            productName = Console.ReadLine();
-            Console.WriteLine("Adress: ");
-            clientAdress = Console.ReadLine();
-            Console.WriteLine();
-            Console.WriteLine($"Order No {orderNumber}. \nClient: {clientName}. \nProduct: {productName}. \nAdress: {clientAdress}.");
-            Console.WriteLine();
+            }
         }
     }
 }
+            
+
     
